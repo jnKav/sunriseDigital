@@ -521,9 +521,9 @@ ul.dropdown-menu li {
   .header-padding {
     padding: 0px 30px;
   }
-  .navbar-brand img{
-    display: none;
-  }
+  /* .navbar-brand img{ */
+    /* display: none; */
+  /* } */
 }
 @media (max-width: 768px) {
   #navbar {
@@ -1118,6 +1118,10 @@ ul.dropdown-menu li {
   border: 1px solid #EEF2F6;
   box-shadow: none;
   width: 100%;
+}
+.form-control:focus{
+  box-shadow: none;
+  border: 1px solid #0097B2;
 }
 .contact-form-wrap .form-group-2 {
   margin-bottom: 13px;
