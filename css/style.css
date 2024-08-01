@@ -162,7 +162,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 .btn-solid-white:hover {
   background: #fff;
-  color: #111;
+  color: #0097B2;
 }
 
 .btn-round {
@@ -420,6 +420,18 @@ a:focus {
 
 .navbar-brand {
   font-weight: 600;
+}
+#navbar .navbar-nav .nav-link:focus,
+#navbar .navbar-nav .nav-item.active .nav-link:hover {
+    color: #0097B2;
+    
+}
+
+ #navbar .navbar-nav .active>.nav-link,
+ #navbar .navbar-nav .nav-link.active,
+ #navbar .navbar-nav .nav-link.show,
+ #navbar .navbar-nav .show>.nav-link {
+    color: #0097B2;
 }
 
 .dropdown-menu {
@@ -1524,7 +1536,7 @@ ul.dropdown-menu li {
   padding-bottom: 10px;
   background: #000;
 }
-.footer .copyright a {
+.footer .right a {
   font-weight: 600;
 }
 
@@ -1564,6 +1576,7 @@ ul.dropdown-menu li {
 
 .copyright {
   color: rgba(255, 255, 255, 0.7);
+  text-align: center;
 }
 .copyright a {
   color: rgba(255, 255, 255, 0.8);
