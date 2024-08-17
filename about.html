@@ -348,6 +348,59 @@
 	</div>
 </section>
 
+<!-- Modal start  -->
+
+<div class="modal" id="myModal" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="container">
+		<div class="close" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+		</div>
+		<div class="row">
+		<div class="col-md-12 py-4">
+			<h3 class="contact_taital">Besoin d'un devis?</h3>
+		</div>
+	</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="container">
+				<form id="devis-form" class="contact__form " method="post" action="mail.php">
+						
+					<div class="row">
+						<div class="col-12">
+							<div id="contact__msg" class="alert alert-success devis__msg" style="display: none" role="alert"> Votre message a été envoyé avec succès.
+							</div>
+						</div>
+					</div>
+			
+					<div class="form-group">
+						<input name="subject" id="subject" type="text" class="form-control" placeholder="Sujet du message" required>
+					</div>
+		
+					<div class="form-group">
+						<input name="name" id="name" type="text" class="form-control" placeholder="Votre nom complet" required>
+					</div>
+					<div class="form-group">
+						<input name="telephone" id="telephone" class="form-control" type="tel"  placeholder="Votre numéro de téléphone" required> 
+					</div>
+					<div class="form-group">
+						<input name="email" id="email" type="email" class="form-control" placeholder="Votre adresse e-mail" required>
+					</div>
+		
+					<div class="form-group-2 mb-4">
+						<textarea name="message" id="message" class="form-control" rows="5"
+							placeholder="Votre message" required></textarea>
+					</div>
+					<button class="btn btn-main" name="submit" type="submit">Envoi message</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+	
+ <!-- Modal end  -->
+
 <!-- footer Start -->
 <footer class="footer section">
 	<div class="container">
@@ -368,7 +421,6 @@
 						<li><a href="index.html">Accueil</a></li>
 						<li><a href="about.html">A propos</a></li>
 						<li><a href="service.html">Services</a></li>
-						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -376,8 +428,8 @@
 			<div class="col-lg-3 col-md-3 col-sm-6">
 				<div class="widget widget-contact mb-5 mb-lg-0">
 					<h4 class="text-capitalize mb-4">Contactez-nous</h4>
-					<h6><a href="tel:+23-345-67890" > <i class="ti-email mr-3"></i>info@sunrisedigital.cd</a></h6>
-					<h6><a href="mailto:support@sun-digital.org"><i class="ti-mobile mr-3"></i>+243 971781900</a></h6>
+					<h6><a href="mailto:contact@sunrisedigital.cd" > <i class="ti-email mr-3"></i>contact@sunrisedigital.cd</a></h6>
+					<h6><a href= "tel:+243971781900"> <i class="ti-mobile mr-3"></i>+243 971781900</a></h6>
 					<h6>
 						<li class="list-inline-item"><a href="https://web.facebook.com/sunrisedigital1" target="_blank"><i class="ti-facebook mr-3"></i>Facebook</a>
 					</h6>	
@@ -427,6 +479,7 @@
 	<!-- Autres scripts -->
     <script src="js/script.js"></script>
 	<script src="js/menunav.js"></script>
+	<script src="js/modal.js"></script>
 
 	<script>
 		//Récupérer l'année actuelle

@@ -3,15 +3,16 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         # FIX: Replace this email with recipient email
-        $mail_to = "info@sun-digital.org";
+        $mail_to = "contact@sunrisedigital.cd";
         
         # Sender Data
         $subject = trim($_POST["subject"]);
         $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
+        $telephone = trim($_POST["telephone"]);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $message = trim($_POST["message"]);
         
-        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
+        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($telephone) OR empty($message)) {
             # Set a 400 (bad request) response code and exit.
             http_response_code(400);
             echo "Veuillez remplir le formulaire er réessayer.";
@@ -19,8 +20,9 @@
         }
         
         # Mail Content
-        $content = "Name: $name\n";
-        $content = "Topic: $subject\n";
+        $content = "Nom: $name\n";
+        $content = "Objet: $subject\n";
+        $content .= "Téléphone: $telephone\n";
         $content .= "Email: $email\n\n";
         $content .= "Message:\n$message\n";
 
