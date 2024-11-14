@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },2000);
             } else {
                 formMessage.fadeIn().removeClass("alert-success").addClass("alert-danger");
-                formMessage.textContent = 'Oops! Un problème s\'est produit, nous n\'avons pas pu envoyer votre message. Veuillez réessayer.';
+                formMessage.textContent = "Oops! Un problème s'est produit, nous n'avons pas pu envoyer votre message. Veuillez réessayer.";
                 setTimeout(function () {
                     formMessage.fadeOut();
                 }, 2000);
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             formMessage.fadeIn().removeClass("alert-success").addClass("alert-danger");
-            formMessage.textContent = 'Il y a eu un problème avec votre soumission, veuillez réessayer.';
+            formMessage.textContent ="Il y a eu un problème avec votre soumission, veuillez réessayer.";
             console.error('Error:', error);
         });
     };
